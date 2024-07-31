@@ -171,5 +171,53 @@ footer {
     }
 }
 
+.collapsible {
+    background-color: #800080;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.active, .collapsible:hover {
+    background-color: #A020F0;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.project-box {
+    border: 2px solid #800080;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-box h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.project-description {
+    margin-top: 10px;
+    font-size: 16px;
+    display: none; /* Initially hidden */
+}
+
+.project-box:hover .project-description {
+    display: block; /* Show on hover */
+}
+
 
 
