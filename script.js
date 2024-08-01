@@ -21,7 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: 'Project 2',
             description: 'Description for project 2',
-            link: 'https://github.com/yourusername/project2'
+            link: 'https://github.com/zahrakara03/TextApp'
+        },
+		{
+            title: 'Project 3',
+            description: 'Description for project 3',
+            link: 'https://github.com/SrederE777/CMPG-223-Project-WlidWaters'
+        },
+		{
+            title: 'Project 4',
+            description: 'Description for project 4',
+            link: 'https://github.com/zahrakara03/Packet-Tracer-Office-Network'
         }
         // Add more projects here
     ];
