@@ -15,13 +15,11 @@ header {
     color: white;
 }
 
-
 nav ul {
     list-style: none;
-    padding: 20;
+    padding: 40px;
     display: flex;
     justify-content: left;
-    background-color: #555; /* Gray background for menu bar */
 }
 
 nav ul li {
@@ -31,18 +29,26 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 25px; /* Adjust padding for better button size */
     display: block;
+    background: linear-gradient(145deg, #666, #333); /* Gradient background for 3D effect */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold; /* Make text bold */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.3); /* Shadow for 3D effect */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for background color, shadow, and scale effect */
 }
 
 nav ul li a:hover {
-    background-color: #777;
+    background: linear-gradient(145deg, #555, #222); /* Darker gradient for hover effect */
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2); /* Enhanced shadow for hover effect */
 }
 
 .header-content {
     display: flex;
     align-items: center;
     padding: 20px;
+    background-color: #D8BFD8; /* Ensure header has the same light purple background */
 }
 
 .profile-pic {
@@ -50,7 +56,20 @@ nav ul li a:hover {
     width: 250px;
     height: 250px;
     margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: transparent; /* Ensure no background color */
 }
+
+.profile-pic:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
 .name-about {
     display: flex;
@@ -82,73 +101,6 @@ h3 {
     font-size: 24px;
 }
 
-.about-section {
-    display: flex;
-    justify-content: space-between;
-}
-
-.about-text {
-    width: 100%;
-}
-
-.about-images {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	
-}
-
-.about-images img {
-    width: 200px;
-    height: 190px;
-    margin: 18px 0;
-    border-radius: 10px;
-	border: 2px solid #800080;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-p {
-    margin: 5px;
-    font-size: 18px;
-    max-width: 12000px;
-	margin-bottom: 15px;
-}
-
-footer {
-    background-color: #555; /* Gray background for footer */
-    color: white;
-    text-align: center;
-    padding: 0px 0;
-    font-size: 12p;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    margin-right: 20px;
-    transition: transform 0.3s ease-in-out;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.profile-pic:hover {
-    transform: scale(1.5);
-}
-
-.about-images img:hover {
-    transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .profile-pic {
         width: 150px;
         height: 150px;
@@ -158,66 +110,109 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-
-    .about-images {
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .about-images img {
-        width: 100px;
-        height: 100px;
-    }
 }
 
 .collapsible {
-    background-color: #800080;
+    background: linear-gradient(145deg, #9b59b6, #8e44ad); /* Purple gradient background for 3D effect */
     color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
     border: none;
-    text-align: left;
     outline: none;
-    font-size: 18px;
-    margin-bottom: 5px;
+    padding: 12px 25px; /* Increase padding for better button size */
+    text-align: left;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.3); /* Shadow for 3D effect */
+    margin-bottom: 15px; /* Space between buttons */
 }
 
-.active, .collapsible:hover {
-    background-color: #A020F0;
+.collapsible:hover {
+    background: linear-gradient(145deg, #8e44ad, #7d3f8c); /* Darker purple gradient for hover effect */
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.6), inset 2px 2px 4px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
 }
 
 .content {
-    padding: 0 18px;
-    display: none;
+    padding: 0 20px;
+    display: none; /* Hidden by default */
     overflow: hidden;
-    background-color: #f1f1f1;
-    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Light background for content */
+    border-radius: 0 0 8px 8px; /* Match button rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Light shadow for content */
 }
 
-.project-box {
-    border: 2px solid #800080;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+/* Project items */
+.project-item {
+    background: #D8BFD8; 
+    border-radius: 8px; /* Rounded corners */
+    padding: 2px;
+    margin: 10px 0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Light shadow for 3D effect */
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+    position: relative; /* For absolute positioning of the description */
 }
 
-.project-box h3 {
-    margin: 0;
-    font-size: 24px;
+.project-item:hover {
+    background: #D8BFD8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-3px); /* Lift project item on hover */
 }
 
+/* Project description */
 .project-description {
-    margin-top: 10px;
-    font-size: 16px;
-    display: none; /* Initially hidden */
+    opacity: 0; /* Hide description by default */
+    max-height: 0; /* Hide description by default */
+    overflow: hidden; /* Hide overflowed content */
+    background-color: #D8BFD8; 
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s, max-height 0.3s; /* Smooth transition for opacity and height */
+    margin-top: 10px; /* Space between title and description */
 }
 
-.project-box:hover .project-description {
-    display: block; /* Show on hover */
+.project-item:hover .project-description {
+    opacity: 1; /* Show description on hover */
+    max-height: 100px; /* Adjust based on content size */
 }
 
+.carousel-container {
+    width: 40%; /* Adjust width for smaller carousel */
+    max-width: 400px; /* Set a maximum width */
+    margin: 20px auto; /* Center align the carousel */
+    overflow: hidden;
+    position: relative;
+}
 
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
+.carousel img {
+    width: 100%; /* Adjust the width of images within the carousel */
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel img:not(.active) {
+    display: none;
+}
+
+footer {
+    background-color: #555; /* Gray background for footer */
+    color: white;
+    text-align: center;
+    padding: 0px 0;
+    font-size: 12px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
